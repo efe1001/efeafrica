@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Image Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider {
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .navigation-dots {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="/assets/HP-11.1JessiDrop_01.webp" alt="Slide 1">
+            <img src="/assets/HP-11.1JessiDrop_01.webp" alt="Slide 2">
+            <img src="/assets/HP-11.1JessiDrop_01.webp" alt="Slide 3">
+            <img src="/assets/HP-11.1JessiDrop_01.webp" alt="Slide 1">
+            <img src="/assets/HP-11.1JessiDrop_01.webp" alt="Slide 2">
+            <img src="/assets/HP-11.1JessiDrop_01.webp" alt="Slide 3">
+        </div>
+        <div class="navigation-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dot');
+        const slideCount = dots.length;
+        let index = 0;
+
+        function updateSlide() {
+            slides.style.transform = `translateX(${-index * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                index = parseInt(dot.getAttribute('data-slide'));
+                updateSlide();
+            });
+        });
+    </script>
+</body>
+</html>
