@@ -1,0 +1,57 @@
+:root{
+    --font-familybg: Poppins, sans-serif;
+}
+
+
+.slidet{
+    display: flex;
+}
+.slide11{
+ 
+    width: 60%;
+    
+}
+.slide12{
+    margin: 40px;
+    width: 30%;
+    background-color: white;
+    height: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   
+}
+
+.insidet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+.inside-img{
+    width: 420px;
+    padding: 5px;
+    
+}
+
+.numsold{
+    font-size: 13px;
+    font-family: var(--font-familybg);
+}
+.price{
+    font-family: var(--font-familybg);
+}
+.click{
+    width: 80px;
+}
+.delivery{
+    width: 80px;
+    font-family: var(--font-familybg);
+}
+.smiling{
+    width: 20px;
+}
