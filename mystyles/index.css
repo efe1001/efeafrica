@@ -87,9 +87,11 @@
 }
 .img1{
     width: 500px;
+    border-radius: 10px;
 }
 .img2{
     width: 500px;
+    border-radius: 10px;
 }
 .slidd{
     width: 650px;
@@ -197,7 +199,7 @@
 }
 
 .trending-d{
-    padding: 30px;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
@@ -363,10 +365,25 @@
         flex-direction: column;
         justify-content: center;
     }
+    .img1{
+        width: 350px;
+    }
+    .img2{
+        width: 350px;
+    }
 
     .header-slide2{
         display: none;
     }
+
+  .trending-d{
+    display: flex;
+    justify-content: center;
+  }
+  .details-img{
+    width: 150px;
+    height: 250px;
+  }
 
     .sandc{
         display: flex;
