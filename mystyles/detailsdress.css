@@ -55,3 +55,128 @@
 .smiling{
     width: 20px;
 }
+
+
+
+
+
+  /* just for andriod phone*/
+  @media  (max-width: 760px) {
+   
+    .slidet{
+        display: block;
+    }
+
+    .slide12{
+        
+        margin: 90px;
+        width: 50%;
+        background-color: white;
+        height: 600px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        justify-content: center;
+       
+    }
+    .inside-img{ 
+        width: 420px;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .insidet{
+        display: flex;
+        flex-wrap: wrap;
+         width: 400px;
+         justify-content: center;
+    }
+
+    .slide11{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100px;
+    }
+   
+
+    .sandc{
+        display: flex;
+        flex-direction: column;
+    }
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 600px; /* Increased height for captions */
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: white; /* Optional: Background for slider */
+    }
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 3000px; /* Each group of four slides takes up 400% of the container */
+    }
+
+    .h2 {
+        animation: slide 25s infinite linear; /* Slower animation for smaller screens */
+    }
+    
+    .h2 {
+        flex: 0 0 25%; /* Larger slide for mobile devices */
+    }
+   
+
+
+@media (max-width: 576px) {
+    .h2 {
+        flex: 0 0 35%; /* Larger slide for small mobile devices */
+    }
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .h2 {
+        position: absolute;
+        left: 200px;
+        flex: 0 0 15%; /* Slightly larger slides for smaller screens */
+    }
+
+   
+
+    .third-container{
+        border: 1px solid rgb(181, 190, 213);
+        
+        width: 400px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 40px;
+    
+    }
+
+
+
+
+@media (max-width: 400px) {
+    .h2 {
+        flex: 0 0 45%; /* Even larger slide for very small screens */
+    }
+
+}
+
+/* Hover effect for desktop only */
+@media (min-width: 768px) {
+    .slider:hover .slide {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
