@@ -197,6 +197,8 @@
 
 .circle{
     width: 200px;
+    border-radius: 50%;
+    height: 200px;
 }
 .trending{
     padding: 30px;
